@@ -39,7 +39,7 @@ class LoginForm extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    let {email, password} = this.state;
+    let { email, password } = this.state;
     this.props.login(email, password);
     this.setState({
       email: '',
