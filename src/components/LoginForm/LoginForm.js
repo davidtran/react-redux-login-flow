@@ -18,21 +18,23 @@ class LoginForm extends Component {
       <form name="loginForm" onSubmit={this.onSubmit}>
         <div className="form-group-collection">
           <div className="form-group">
-            <label>Email</label>
+            <label>Email:</label>
             <input type="email" name="email" onChange={e => this.setState({email: e.target.value})} value={email}/>
           </div>
 
           <div className="form-group">
-            <label>Password</label>
+            <label>Password:</label>
             <input type="password" name="password" onChange={e => this.setState({password: e.target.value})} value={password}/>
           </div>
         </div>
 
         <input type="submit" value="Login" />
 
-        { isLoginPending && <div>Please wait...</div> }
-        { isLoginSuccess && <div>Success.</div> }
-        { loginError && <div>{loginError.message}</div> }
+        <div className="message">
+          { isLoginPending && <div>Please wait...</div> }
+          { isLoginSuccess && <div>Success.</div> }
+          { loginError && <div>{loginError.message}</div> }
+        </div>
       </form>
     )
   }
