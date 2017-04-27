@@ -1,0 +1,29 @@
+form[name="loginForm"] {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+label {
+  min-width: 80px;
+  width: 80px;
+  font-weight: bold;
+}
+
+input[type="email"], input[type="password"] {
+  box-sizing: border-box;
+  height: 20px;
+  padding: 3px;
+  flex-grow: 1;
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+}
